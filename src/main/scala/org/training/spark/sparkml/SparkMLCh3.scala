@@ -1,4 +1,4 @@
-package org.training.spark
+package org.training.spark.sparkml
 
 import java.io.File
 
@@ -8,7 +8,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 import scala.collection.mutable
 
 object SparkMLCh3 extends App {
-  val conf = new SparkConf().setAppName("SparkMLCh3").setMaster("local[4]")
+  val conf = new SparkConf().setAppName("SparkMLCh4").setMaster("local[4]")
   val sc = new SparkContext(conf)
   val path = "E:\\Download\\ml-100k"
 //  println(File.separator)
