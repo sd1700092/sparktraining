@@ -1,5 +1,7 @@
 package impatient2.chapter3
 
+import java.util.TimeZone
+
 import scala.util.Random
 
 object Main {
@@ -9,13 +11,21 @@ object Main {
     println(a)
 
     val arr = Array(1, 2, 3, 4, 5)
+    println(arr.grouped(2))
     for (i <- 0 to arr.length) {
       if (i % 2 == 0 && i < arr.length - 1) {
         val tmp = arr(i + 1)
         arr(i + 1) = arr(i)
-        arr(0) = tmp
+        arr(i) = tmp
       }
     }
     println(arr.mkString(" ").toString)
+
+    val arr1 = Array(5, 4, 3, 0, 2, 1, -1, -3, 0, -7, -11)
+    println((arr1.filter(_ > 0) ++ arr1.filter(_ < 0) ++ arr1.filter(_ == 0)).mkString(" "))
+
+    println(arr1.sortWith(_ > _).mkString(" "))
+
+    println(TimeZone.getAvailableIDs.filter(_.startsWith("America")).map(_.stripPrefix("America/")).sorted.mkString(" "))
   }
 }
