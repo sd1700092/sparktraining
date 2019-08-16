@@ -1,7 +1,7 @@
 package impatient2.chapter5
 
 class Counter {
-  private var value = 0
+  private[this] var value = 0
 
   def increment() {
     value += 1
@@ -9,7 +9,7 @@ class Counter {
 
   def current: Int = value
 
-
+  def isLess(other: Counter):Boolean = value < other.value
 }
 
 object Counter {
