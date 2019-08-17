@@ -1,7 +1,7 @@
 package impatient2.chapter5
 
 class Counter {
-  private[this] var value = 0
+  private[chapter5] var value = 0
 
   def increment() {
     value += 1

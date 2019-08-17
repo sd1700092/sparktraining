@@ -39,7 +39,7 @@ object Person {
     println(fred.age)
     fred.age = 2
     println(fred.age)
-    val person = new Person1("aa", 1)()
+    val person = new Person1("aa", 1)
     person
   }
 }
