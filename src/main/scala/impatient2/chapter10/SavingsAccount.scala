@@ -9,3 +9,11 @@ class SavingsAccount extends Account with ConsoleLogger {
     }
   }
 }
+
+abstract class absSavingsAccount extends Account with Logger {
+  def withdraw(amount: Double): Unit = {
+    if (amount > balance)
+      severe("Insufficient funds")
+
+  }
+}
