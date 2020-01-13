@@ -1,6 +1,6 @@
 package impatient2.chapter18_generic
 
-object generic_lowerbound extends App {
+object generic_3_lowerbound extends App {
 
   class Pair[T](val first: T, val second: T) {
     def replaceFirst[R >: T](newFirst: R) = new Pair[R](newFirst, second)
